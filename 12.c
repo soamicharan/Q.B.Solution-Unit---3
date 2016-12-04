@@ -3,10 +3,12 @@
 
 int main()
 {
-    int i;
+    int **mat,a,b,i;
     printf("Enter dimension of square matrix.\n");
     scanf("%d",&i);
-    int mat[i][i],a,b;
+   mat=(int *)malloc(i*sizeof(int));
+    for(a=0;a<i;a++)
+        mat[a]=(int *)malloc(i*sizeof(int));
     printf("Enter Matrix.\n");
     for(a=0;a<i;a++)
         for(b=0;b<i;b++)
